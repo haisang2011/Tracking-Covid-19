@@ -1,8 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FormControl, InputLabel, NativeSelect } from "@material-ui/core";
+import {
+  FormControl,
+  FormHelperText,
+  InputLabel,
+  NativeSelect,
+} from "@material-ui/core";
 
-function index({ value, handleOnChange, countries }) {
+function CountrySelector({ value, handleOnChange, countries }) {
   return (
     <FormControl>
       <InputLabel htmlFor="country-selector" shrink>
@@ -22,10 +27,13 @@ function index({ value, handleOnChange, countries }) {
           </option>
         ))}
       </NativeSelect>
+      <FormHelperText>
+        You choose country to report display please!!!
+      </FormHelperText>
     </FormControl>
   );
 }
 
-index.propTypes = {};
+CountrySelector.propTypes = {};
 
-export default index;
+export default CountrySelector;
